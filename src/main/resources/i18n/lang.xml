@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>English translation of "LAN Ethernet 2 Channel Relay Board
+		Delay Switch TCP/UDP Controller Module" demo application. Also acting
+		as the defaul language.</comment>
+	<entry key="app.title">SR201 Demo</entry>
+	<entry key="view.prop.caption">Settings</entry>
+	<entry key="view.prop.ip.label">IPv4</entry>
+	<entry key="view.prop.port.label">Port</entry>
+	<entry key="view.prop.protocol.label">Protocol</entry>
+	<entry key="view.prop.tcp.label">TCP</entry>
+	<entry key="view.prop.ucp.label">UCP</entry>
+	<entry key="view.prop.but.test.label">Test</entry>
+	<entry key="view.prop.but.accept.label">Connect</entry>
+	<entry key="view.prop.but.exit.label">Exit</entry>
+	
+	<entry key="msg.error.caption">Error</entry>
+	<entry key="msg.cannot.save.settings">Could not save settings. Your changes will be lost.</entry>
+	<entry key="msg.conn.factory.ip.invalid">IP address is not valid.</entry>
+	
+	<entry key="msg.tcp.cannot.connect">Could not connect to {0}:{1}</entry>
+	<entry key="msg.tcp.cannot.send">Could not send data</entry>
+	<entry key="msg.tcp.cannot.receive">Could not read data</entry>
+	
+	<entry key="msg.udp.cannot.connect">Could not open UDP socket.</entry>
+	<entry key="msg.udp.cannot.resolve.ip">Could not resolve address {0}.</entry>
+	<entry key="msg.udp.cannot.send">Could not send data</entry>
+	
+	<entry key="msg.conn.factory.conn.ok">Connection established.</entry>
+	<entry key="msg.conn.factory.cannot.connect">Cannot connect to relay.</entry>
+	
+	<entry key="view.toggle.but.tooltip">{0}: {1}</entry>
+	<entry key="view.toggle.but.tooltip.CH1">Channel 1</entry>
+	<entry key="view.toggle.but.tooltip.CH2">Channel 2</entry>
+	<entry key="view.toggle.but.tooltip.CH3">Channel 3</entry>
+	<entry key="view.toggle.but.tooltip.CH4">Channel 4</entry>
+	<entry key="view.toggle.but.tooltip.CH5">Channel 5</entry>
+	<entry key="view.toggle.but.tooltip.CH6">Channel 6</entry>
+	<entry key="view.toggle.but.tooltip.CH7">Channel 7</entry>
+	<entry key="view.toggle.but.tooltip.CH8">Channel 8</entry>
+	<entry key="view.toggle.but.tooltip.UNKNOWN">state unknown</entry>
+	<entry key="view.toggle.but.tooltip.ON">relay on</entry>
+	<entry key="view.toggle.but.tooltip.OFF">relay off</entry>
+	<entry key="view.toggle.but.settings.label">Settings</entry>
+
+</properties>
