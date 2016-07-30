@@ -25,7 +25,7 @@ The board also listens to the TCP port 5111. Over this connection the board can 
 
 ## Factory Defaults
 
-* Static IP address : 192.168.0.201
+* Static IP address : 192.168.1.100
 * Subnet mask :: 255.255.255.0
 * Default Gateway : 192.168.1.1
 * Persistent relay state when power is lost : off
