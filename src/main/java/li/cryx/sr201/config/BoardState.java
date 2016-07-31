@@ -30,7 +30,7 @@ public class BoardState {
 		// unknown "empty"
 		state.persistent = "1".equals(ss[4]);
 		state.version = "1.0." + ss[5];
-		state.serialNumber = ss[6].substring(1, 14);
+		state.serialNumber = ss[6].substring(0, 14);
 		state.password = ss[6].substring(14);
 		state.dnsServer = ss[7];
 		state.cloudService = ss[8];
