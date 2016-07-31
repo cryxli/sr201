@@ -99,6 +99,7 @@ class Sr201TcpConnection extends AbstractSr201Connection {
 	@Override
 	public byte[] send(final byte[] data) throws ConnectionException {
 		if (!isConnected()) {
+			// we have not yet connected
 			connect();
 		}
 
@@ -112,7 +113,13 @@ class Sr201TcpConnection extends AbstractSr201Connection {
 		try {
 			final byte[] buf = new byte[1024];
 			final int len = in.read(buf);
-			return Arrays.copyOf(buf, len);
+			if (len >= 0) {
+				return Arrays.copyOf(buf, len);
+			} else {
+				// detect disconnect by peer
+				close();
+				throw new DisconnectedException();
+			}
 		} catch (final IOException e) {
 			throw new ConnectionException("msg.tcp.cannot.receive", e);
 		}

@@ -17,7 +17,7 @@ import java.util.Random;
  * </pre>
  *
  * <p>
- * The board always answers with a string starging with <code>&gt;</code> and
+ * The board always answers with a string starting with <code>&gt;</code> and
  * ending with <code>;</code>. If the board could execute the command a
  * <code>&gt;OK;</code> is returned. An <code>&gt;ERR;</code>, if it does not
  * know the command.

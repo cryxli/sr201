@@ -22,6 +22,7 @@
 	<entry key="msg.tcp.cannot.connect">Could not connect to {0}:{1}</entry>
 	<entry key="msg.tcp.cannot.send">Could not send data</entry>
 	<entry key="msg.tcp.cannot.receive">Could not read data</entry>
+	<entry key="msg.tcp.disconnected">Connection was reset by peer.</entry>
 	
 	<entry key="msg.udp.cannot.connect">Could not open UDP socket.</entry>
 	<entry key="msg.udp.cannot.resolve.ip">Could not resolve address {0}.</entry>

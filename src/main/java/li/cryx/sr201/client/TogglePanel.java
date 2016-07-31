@@ -53,20 +53,20 @@ public class TogglePanel extends JPanel {
 	}
 
 	private StateButton createStateButton(final Channel channel) {
-		StateButton but = new StateButton(msg, channel);
+		final StateButton but = new StateButton(msg, channel);
 		but.addActionListener(buttonListener);
 		butStates.put(channel, but);
 		return but;
 	}
 
 	private void disableButtons() {
-		for (JButton but : butStates.values()) {
+		for (final JButton but : butStates.values()) {
 			but.setEnabled(false);
 		}
 	}
 
 	private void enableButtons() {
-		for (JButton but : butStates.values()) {
+		for (final JButton but : butStates.values()) {
 			but.setEnabled(true);
 		}
 	}
@@ -102,12 +102,17 @@ public class TogglePanel extends JPanel {
 					@Override
 					public void run() {
 						final Map<Channel, State> states;
-						if (but.getState() == State.ON) {
-							states = conn.send(but.getChannel(), State.OFF);
-						} else {
-							states = conn.send(but.getChannel(), State.ON);
+						try {
+							if (but.getState() == State.ON) {
+								states = conn.send(but.getChannel(), State.OFF);
+							} else {
+								states = conn.send(but.getChannel(), State.ON);
+							}
+							updateStates(states);
+						} catch (final ConnectionException e) {
+							LOG.error("Cannot send", e);
+							new DialogFactory(msg).warn(e.translate(msg));
 						}
-						updateStates(states);
 						enableButtons();
 					}
 				});
@@ -143,7 +148,7 @@ public class TogglePanel extends JPanel {
 					final Map<Channel, State> states = conn.getStates();
 					updateStates(states);
 					enableButtons();
-				} catch (ConnectionException e) {
+				} catch (final ConnectionException e) {
 					LOG.error("Cannot connect", e);
 					new DialogFactory(msg).error(e.translate(msg));
 				}
@@ -152,7 +157,7 @@ public class TogglePanel extends JPanel {
 	}
 
 	private void updateStates(final Map<Channel, State> states) {
-		for (Entry<Channel, State> e : states.entrySet()) {
+		for (final Entry<Channel, State> e : states.entrySet()) {
 			final StateButton but = butStates.get(e.getKey());
 			but.setState(e.getValue());
 		}
