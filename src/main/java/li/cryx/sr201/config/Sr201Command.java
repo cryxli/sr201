@@ -78,7 +78,10 @@ public enum Sr201Command {
 	 */
 	SET_DNS("#8{},{};"),
 
-	// unknown command #9
+	/**
+	 * Set the cloud server host. Expects a host name as an argument.
+	 */
+	SET_HOST("#9{},{};"),
 
 	/** Disable cloud service. */
 	CLOUD_DISABLE("#A{},0;"),
@@ -92,6 +95,7 @@ public enum Sr201Command {
 	 */
 	SET_PW("#B{},{};");
 
+	/** Config commands are sent to TCP port 5111. */
 	public static final int CONFIG_PORT = 5111;
 
 	private final String cmd;

@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 
 public class DialogFactory {
 
+	private static String appTitleKey = "app.title";
+
 	private final ResourceBundle resourceBundle;
 
 	private final Component parent;
@@ -20,8 +22,12 @@ public class DialogFactory {
 		this.parent = parent;
 	}
 
+	public void changeAppTitle(final String langKey) {
+		appTitleKey = langKey;
+	}
+
 	public void error(final String msg) {
-		JOptionPane.showMessageDialog(parent, msg, resourceBundle.getString("app.title"), JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(parent, msg, resourceBundle.getString(appTitleKey), JOptionPane.ERROR_MESSAGE);
 	}
 
 	public void errorTranslate(final String msgKey) {
@@ -29,7 +35,7 @@ public class DialogFactory {
 	}
 
 	public void info(final String msg) {
-		JOptionPane.showMessageDialog(parent, msg, resourceBundle.getString("app.title"),
+		JOptionPane.showMessageDialog(parent, msg, resourceBundle.getString(appTitleKey),
 				JOptionPane.INFORMATION_MESSAGE);
 	}
 
@@ -38,7 +44,7 @@ public class DialogFactory {
 	}
 
 	public void warn(final String msg) {
-		JOptionPane.showMessageDialog(parent, msg, resourceBundle.getString("app.title"), JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(parent, msg, resourceBundle.getString(appTitleKey), JOptionPane.WARNING_MESSAGE);
 	}
 
 	public void warnTranslate(final String msgKey) {

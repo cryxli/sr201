@@ -44,5 +44,45 @@
 	<entry key="view.toggle.but.tooltip.ON">relay on</entry>
 	<entry key="view.toggle.but.tooltip.OFF">relay off</entry>
 	<entry key="view.toggle.but.settings.label">Settings</entry>
+	
+	<entry key="view.config.caption">SR-201 Config Tool</entry>
+	<entry key="view.config.send.button">Send</entry>
+	<entry key="view.conf.conn.caption">Target board</entry>
+	<entry key="view.conf.conn.ip.label">Current IP address</entry>
+	<entry key="view.conf.conn.connect.button">Connect</entry>
+	<entry key="view.conf.info.caption">Info</entry>
+	<entry key="view.conf.info.serial.label">Serial Number</entry>
+	<entry key="view.conf.info.version.label">Version</entry>
+	<entry key="view.conf.ip.caption">IP Address</entry>
+	<entry key="view.conf.ip.ip.label">Static IP</entry>
+	<entry key="view.conf.ip.subnet.label">Subnet Mask</entry>
+	<entry key="view.conf.ip.gateway.label">Default Gateway</entry>
+	<entry key="view.conf.persist.caption">Relay State</entry>
+	<entry key="view.conf.persist.enable.label">Persist state when power lost</entry>
+	<entry key="view.conf.cloud.caption">Cloud Service</entry>
+	<entry key="view.conf.cloud.enabled.label">Enable cloud service</entry>
+	<entry key="view.conf.cloud.service.label">Service host</entry>
+	<entry key="view.conf.cloud.password.label">Service password</entry>
+	<entry key="view.conf.cloud.dns.label">DNS Server</entry>
+	
+	<entry key="msg.conf.invalid.ip">You entered an invalid IP address.</entry>
+	<entry key="msg.conf.cannot.connect">Cannot connect to config port.</entry>
+	<entry key="msg.conf.cannot.send">Could not send command to board.</entry>
+	<entry key="msg.conf.cannot.receive">Could not read answer of board.</entry>
+	<entry key="msg.conf.err.ip">Could not set new IP address.</entry>
+	<entry key="msg.conf.err.subnet">Could not set new subnet mask.</entry>
+	<entry key="msg.conf.err.gateway">Could not set new default gateway.</entry>
+	<entry key="msg.conf.err.persist">Could not set persistent relay state.</entry>
+	<entry key="msg.conf.err.cloud">Could not change cloud service state.</entry>
+	<entry key="msg.conf.err.host">Could not change cloud service host.</entry>
+	<entry key="msg.conf.err.password">Could not change cloud service password.</entry>
+	<entry key="msg.conf.err.dns">Could not change DNS server.</entry>
+	<entry key="msg.conf.err.restart">Could not restart board.</entry>
+	<entry key="msg.conf.valid.ip">Static IP is not valid.</entry>
+	<entry key="msg.conf.valid.subnet">Subnet mask is not valid.</entry>
+	<entry key="msg.conf.valid.gateway">Default gateway is not valid.</entry>
+	<entry key="msg.conf.valid.dns">DNS server is not valid.</entry>
+	<entry key="msg.conf.nothing">No changes to send.</entry>
+	<entry key="msg.conf.success">Config sent to board.</entry>
 
 </properties>

@@ -30,7 +30,7 @@ public class MainWindow extends JFrame {
 
 	private static final Logger LOG = LoggerFactory.getLogger(MainWindow.class);
 
-	private static Settings loadSettings() {
+	public static Settings loadSettings() {
 		final File file = new File(System.getProperty("user.home"), "sr201.xml");
 		if (file.isFile()) {
 			final Properties prop = PropertiesSupport.loadFromXml(file);
@@ -97,7 +97,7 @@ public class MainWindow extends JFrame {
 
 		// ensure a minimal window size
 		pack();
-		Dimension dim = getSize();
+		final Dimension dim = getSize();
 		if (dim.width < 390) {
 			dim.width = 390;
 		}

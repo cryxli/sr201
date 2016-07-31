@@ -3,6 +3,5 @@
 <properties>
 	<comment>Default settings</comment>
 	<entry key="conn.ip">192.168.1.100</entry>
-	<entry key="conn.port">6722</entry>
 	<entry key="conn.protocol">TCP</entry>
 </properties>
