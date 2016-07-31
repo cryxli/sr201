@@ -72,7 +72,7 @@ class Sr201TcpConnection extends AbstractSr201Connection {
 	@Override
 	public void connect() throws ConnectionException {
 		try {
-			socket = new Socket(ip, PORT);
+			socket = SocketFactory.newSocket(ip, PORT);
 			out = socket.getOutputStream();
 			in = socket.getInputStream();
 		} catch (final IOException e) {

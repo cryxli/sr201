@@ -63,7 +63,7 @@ public class Sr201UdpConnection extends AbstractSr201Connection {
 	public void connect() throws ConnectionException {
 		// open socket
 		try {
-			socket = new DatagramSocket();
+			socket = SocketFactory.newDatagramSocket();
 		} catch (final SocketException e) {
 			close();
 			throw new ConnectionException("msg.udp.cannot.connect", e);
@@ -75,6 +75,8 @@ public class Sr201UdpConnection extends AbstractSr201Connection {
 			close();
 			throw new ConnectionException("msg.udp.cannot.resolve.ip", e, ip);
 		}
+		// reset internal state
+		updateStates(null);
 	}
 
 	@Override
@@ -120,7 +122,7 @@ public class Sr201UdpConnection extends AbstractSr201Connection {
 	 *            Data bytes of latest command.
 	 */
 	private void updateStates(final byte[] data) {
-		if (data.length != 2) {
+		if (data == null || data.length != 2) {
 			// unknown command
 			states = "........".getBytes(StandardCharsets.US_ASCII);
 			return;

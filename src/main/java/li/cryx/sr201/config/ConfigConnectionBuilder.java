@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import li.cryx.sr201.connection.ConnectionException;
 import li.cryx.sr201.connection.DisconnectedException;
+import li.cryx.sr201.connection.SocketFactory;
 import li.cryx.sr201.util.Closer;
 
 /**
@@ -81,7 +82,7 @@ public class ConfigConnectionBuilder {
 
 	/**
 	 * Create a new builder that will send commands to the given IP address.
-	 * 
+	 *
 	 * @param ip
 	 *            Current IP address of board.
 	 */
@@ -126,7 +127,7 @@ public class ConfigConnectionBuilder {
 	 */
 	private void connect() throws ConnectionException {
 		try {
-			socket = new Socket(ip, Sr201Command.CONFIG_PORT);
+			socket = SocketFactory.newSocket(ip, Sr201Command.CONFIG_PORT);
 			in = new InputStreamReader(socket.getInputStream(), StandardCharsets.US_ASCII);
 			out = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.US_ASCII);
 		} catch (final IOException e) {
