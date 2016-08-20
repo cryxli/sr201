@@ -1,0 +1,25 @@
+sr201-config-client
+-------------------
+
+This module implements a swing GUI tool that lets you change the settings of the
+relay board.
+
+You can change the IP address and subnet mask of the board. The ports are fixed. You can
+also change the settings for the cloud service.
+
+
+Usage
+-----
+
+Start the JAR in the target directory that contains all the dependencies: 
+
+> java -jar sr201-config-client-<version>-jar-with-dependencies.jar
+
+At first everything but the current IP address field is grayed out. You have to connect
+once and therefore read the current configuration from the board to activate the other
+field.
+
+Once you changed everything you want, all settings are sent at once and the connection is
+closed again. Therefore, the GUI will return to grayed out state and you have to reconnect
+to activate it again.
+ 

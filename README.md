@@ -36,9 +36,10 @@ The board also listens to the TCP port **5111**. Over this connection the board 
 
 ## Example Code
 
-This repo contains the folling startable classes:
+This repo contains the following modules:
 
-* li.cryx.sr201.client.MainWindow - Simple client with 8 toggle buttons to change the state of the relays.
-* li.cryx.sr201.client.conf.RemoteConfigWindow - Client to read and change the config of the board.
+* sr201-config-client - Client to read and change the config of the board.
+* sr201-client - Simple client with 8 toggle buttons to change the state of the relays.
+* sr201-server - REST interface to change the state of the relays.
  
-Maven does register the first class as the default main class of the JAR.
+Maven will create an executable JAR in each of the modules target directories.

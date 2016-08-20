@@ -1,0 +1,19 @@
+sr201-server
+------------
+
+This module illustrates how to create a REST interface on top of the normal TCP
+connection.
+
+I use Spring Boot to keep the code clean. Of course, Spring boot is complete
+overkill. But it produces a stand-alone web server for free.
+
+
+Usage
+-----
+
+Simply start the produces *.jar in the target directory:
+
+> java -jar sr201-server-<version>.jar
+
+It will read the Settings in your user home sr201.xml and listen to the "server.port"
+property specified therein. By default this is port 8082.

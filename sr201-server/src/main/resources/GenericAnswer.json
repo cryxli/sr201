@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "type": "object",
+    "properties": {
+        "nok": {
+            "description": "Optional error message.",
+            "type": "string"
+        },
+        "states": {
+            "description": "Each relay is repesented with its current state.",
+            "type": "object",
+            "properties": {
+                "1": { "$ref": "#/definitions/state" },
+                "2": { "$ref": "#/definitions/state" },
+                "3": { "$ref": "#/definitions/state" },
+                "4": { "$ref": "#/definitions/state" },
+                "5": { "$ref": "#/definitions/state" },
+                "6": { "$ref": "#/definitions/state" },
+                "7": { "$ref": "#/definitions/state" },
+                "8": { "$ref": "#/definitions/state" }
+            },
+            "additionalProperties": false
+        }
+    },
+    "required": [ "states" ],
+    "additionalProperties": false,
+
+    "definitions": {
+        "state": {
+            "description": "State of a relay can be: 1=on/pulled, 0=off/released, 2=unknown",
+            "type": "number",
+            "multipleOf" : 1,
+            "minimum": 0,
+            "maximum": 2
+        }
+    }
+}

@@ -1,0 +1,19 @@
+sr201-client
+------------
+
+This module implements a simple swing client that lets you switch all 8 relays.
+
+<<TODO>>
+
+Usage
+-----
+
+Start the JAR in the target directory that contains all the dependencies: 
+
+> java -jar sr201-client-<version>-jar-with-dependencies.jar
+
+At first you are presented with the config dialog that lets you specify the boards IP
+address and over which protocol you want to connect to it.
+
+Then a dialog with eight toggle buttons is shown. The icons of the buttons represent the
+states of the relays. Clicking a button toggles the respective relay state. 
