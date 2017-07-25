@@ -29,6 +29,7 @@
     margin-bottom: 8px;
 }
 .form-style-5 input[type="text"],
+.form-style-5 input[type="password"],
 .form-style-5 input[type="date"],
 .form-style-5 input[type="datetime"],
 .form-style-5 input[type="email"],
@@ -58,6 +59,7 @@
     
 }
 .form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="password"]:focus,
 .form-style-5 input[type="date"]:focus,
 .form-style-5 input[type="datetime"]:focus,
 .form-style-5 input[type="email"]:focus,
