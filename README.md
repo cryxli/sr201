@@ -41,6 +41,7 @@ This repo contains the following modules:
 * sr201-config-client - Client to read and change the config of the board.
 * sr201-client - Simple client with 8 toggle buttons to change the state of the relays.
 * sr201-server - REST interface to change the state of the relays.
+* sr201-php-cloud-service - Example implementation of a cloud service back-end in PHP provided by [hobpet](https://github.com/hobpet) following the findings of [anakhaema](https://github.com/anakhaema).
  
 Maven will create an executable JAR in each of the modules target directories.
 
