@@ -61,12 +61,15 @@ To configure your device to use this sample service, all you need to do is to se
   ```
   #91111,sr201.000webhostapp.com;
   ```
-  and this one to save the changes:
+  then enable the cloud service:
+  ```
+  #A1111,1;
+  ```
+  and save the changes:
   ```
   #71111;
   ```
   
-
   See <https://github.com/cryxli/sr201/wiki/Config-commands> for more details.
 
 ## Disclaimer
