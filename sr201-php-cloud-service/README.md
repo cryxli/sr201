@@ -50,6 +50,8 @@ Then the channel can be selected (Channel 1 is the default) with the Action (Pul
 
 The pages constructs the command text and saves it to the *MD5(DeviceSerial+Password)_cmd* file. You can just query the status without sending any instruction to the device.
 
+Make sure to use *.htaccess* files properly to provide some level of safety for the app. The one in the *SyncServiceImpl.svc* is required to process the *ReportStatus* "Web Service" request as *ReportStatus.php*.
+
 
 ## Test Cloud Service
 The sample code is hosted on a free hosting site and accessible at the following URL:
@@ -69,7 +71,7 @@ To configure your device to use this sample service, all you need to do is to se
 
 ## Disclaimer
 
-The hosted service is for demonstration purposes only, provided as it is without any support whatsoever. Use the service on your own risk.
+Both the sample serviced and the hosted service is for demonstration purposes only, provided as it is without any support whatsoever. Use the service on your own risk.
 The service logs the IP address of both the device and the client requests, but does not store the password, only the hash. Please check the source code for more details.
 
 Thanks and credit goes to **anakhaema** for the initial post.
