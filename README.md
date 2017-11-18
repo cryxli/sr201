@@ -52,3 +52,11 @@ In addition to my Java code examples that are clearly intended as a replacement 
 * perl-config-script - A PERL script to manipulate the board's configuration by Christian DEGUEST.
 
 Many thanks to anyone who contributed to this knowledge base!
+
+## Own Scripts
+
+If you want to quickly setup your SR-201 without even starting a script or anything else, just check the protocol [[https://github.com/cryxli/sr201/wiki/Config-commands]] and e.g. send a command via netcat:
+
+    printf "#11111;" | nc [yourip] 5111
+
+Note: It is crucial to use printf here, as newlines are seen as errors. It drove me crazy to find out about this one.
