@@ -55,7 +55,7 @@ Many thanks to anyone who contributed to this knowledge base!
 
 ## Own Scripts
 
-If you want to quickly setup your SR-201 without even starting a script or anything else, just check the protocol [[https://github.com/cryxli/sr201/wiki/Config-commands]] and e.g. send a command via netcat:
+If you want to quickly setup your SR-201 without even starting a script or anything else, just check the protocol [https://github.com/cryxli/sr201/wiki/Config-commands](Config commands) and e.g. send a command via netcat:
 
     printf "#11111;" | nc [yourip] 5111
 
