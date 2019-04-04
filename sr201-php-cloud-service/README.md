@@ -52,6 +52,10 @@ The pages constructs the command text and saves it to the *MD5(DeviceSerial+Pass
 
 Make sure to use *.htaccess* files properly to provide some level of safety for the app. The one in the *SyncServiceImpl.svc* is required to process the *ReportStatus* "Web Service" request as *ReportStatus.php*.
 
+Alternatively index2.php can be used with form2.css instead of index.php and form.css. To impliment, edit index2.php with your serial number and password. ip web cameras, camera1 is an http mjpeg camera while camera2 is a snapshot http jpeg camera that updates the image. If using apache2, ensure permissions are www-data and apache2.conf AllowOverride All is set under <Directory /var/www/>. Check relay is communicating with server with tail -f /var/log/apache2/access.log. 
+```
+"POST /SyncServiceImpl.svc/ReportStatus HTTP/1.1" 200 157 "-" "SR-201W/M96Y"
+```
 
 ## Test Cloud Service
 The sample code is hosted on a free hosting site and accessible at the following URL:
