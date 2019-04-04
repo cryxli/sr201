@@ -50,6 +50,7 @@ Maven will create an executable JAR in each of the modules target directories.
 In addition to my Java code examples that are clearly intended as a replacement for the default VB and Delphi programs, I added a scripts directory that contains simpler more pragmatic approaches to the SR-201 communication scheme.
 
 * perl-config-script - A PERL script to manipulate the board's configuration by Christian DEGUEST.
+* python-config-script - A python script to manipulate the board's configuration.
 
 Many thanks to anyone who contributed to this knowledge base!
 
