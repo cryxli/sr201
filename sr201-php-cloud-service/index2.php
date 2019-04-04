@@ -1,6 +1,6 @@
 <?php
 // should/could remove once debugging is done
-echo 'Hello ' . htmlspecialchars($_POST["submit"]) . 'ing ';
+//echo 'Hello ' . htmlspecialchars($_POST["submit"]) . 'ing ';
 
 //start actual code
 error_reporting(E_ERROR | E_PARSE);
@@ -34,20 +34,20 @@ if($current != "\"A\"" && $current!=FALSE)
 }
 elseif($_POST['submit']=="Open" and $current2=="00000000")
 {
-    echo "gate relay. Pull from " . $current2; // for debug purposes
+    //echo "gate relay. Pull from " . $current2; // for debug purposes
     $action="\"A" . $pull .  $relay_1 . $noTimeout ."\""; 
     $current2="10000000";
-    echo " to new state = " . $current2;
+    //echo " to new state = " . $current2;  //for debug purposes
     // Write the action to the file
     file_put_contents($file, $action);
     file_put_contents($file2, $current2);
 }
 elseif($_POST['submit']=="Open" and $current2=="10000000")
 {
-    echo " gate relay release from " . $current2; // for debug purposes
+    //echo " gate relay release from " . $current2; // for debug purposes
     $action="\"A" . $release .  $relay_1 . $noTimeout ."\"";
     $current2="00000000"; 
-    echo " to new state = " . $current2;
+    //echo " to new state = " . $current2; //for debug purposes
     // Write the action to the file
     file_put_contents($file, $action);
     file_put_contents($file2,$current2);
@@ -76,13 +76,13 @@ file_put_contents($logfile, $content, FILE_APPEND | LOCK_EX);
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>NBGS GATE CONTROL</TITLE>
+		<title>SR201 CONTROL</TITLE>
 		<link rel="stylesheet" type="text/css" href="form2.css">
 	</head>
-		<h1 class="center">NBGS GATE CONTROL</h1>
+		<h1 class="center">SR201 CONTROL</h1>
 	<body onload="toggleColor() , jsUpdate()">
 		<div class="form-style-5">
-		<form action="inde2x.php" method="post">
+		<form action="index2.php" method="post">
 	        	<input type="hidden" name="serial" value="<?php echo $serial; ?>">
         		<input type="hidden" name="password" value="<?php echo $password; ?>">
 
