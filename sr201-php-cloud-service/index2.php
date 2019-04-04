@@ -77,12 +77,12 @@ file_put_contents($logfile, $content, FILE_APPEND | LOCK_EX);
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>NBGS GATE CONTROL</TITLE>
-		<link rel="stylesheet" type="text/css" href="form.css">
+		<link rel="stylesheet" type="text/css" href="form2.css">
 	</head>
 		<h1 class="center">NBGS GATE CONTROL</h1>
 	<body onload="toggleColor() , jsUpdate()">
 		<div class="form-style-5">
-		<form action="index.php" method="post">
+		<form action="inde2x.php" method="post">
 	        	<input type="hidden" name="serial" value="<?php echo $serial; ?>">
         		<input type="hidden" name="password" value="<?php echo $password; ?>">
 
